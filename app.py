@@ -42,7 +42,7 @@ elif page == "Style Transfer":
                 with col2:
                     st.image(image2, caption="Style Image", width=300)
 
-        model = tf.saved_model.load('saved_model')
+        model = tf.saved_model.load('saved_model') #https://www.kaggle.com/models/google/arbitrary-image-stylization-v1/tensorFlow1/256/2?tfhub-redirect=true
 
         def tensor_to_image(tensor):
             tensor = np.array(tensor * 255, dtype=np.uint8)
